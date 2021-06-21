@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Forms</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <style>
+            body {
+                background-color: aquamarine;
+            }
+            @media screen and (min-width:768px) {
+                body {
+                    background-color: gray;
+                }
+            }
+            @media screen and (min-width:960px) {
+                body {
+                    background-color: gray;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="/registration"> <!-- GET, POST, PUT, DELETE, PATCH-->
+            <!-- fieldset, legend -->
+            <label>User Name</label><input type="text" name="userid"/><br/>
+            <label>Password</label><input type="password" name="password"/><br/>
+            <input type="hidden" name="customer_id"/><br/>
+            <input type="email"/><br/>
+            <input type="date"/><br/>
+            <input type="file"/><br/>
+
+            <input type="checkbox"/>I agree to terms<br/>
+            <input type="radio" name="gender" value="Male"/>Male
+            <input type="radio" name="gender" value="Female"/>Female<br/>
+            
+            <select>
+                <option>Select Month</option>
+                <option>Jan</option>
+                <option>feb</option>
+                <option>March</option>
+            </select>
+
+            <textarea cols="60" rows="4"></textarea>
+
+            <button type="submit">OK</button>
+        </form>
+
+    </body>
+</html>

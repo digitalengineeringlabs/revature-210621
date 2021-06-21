@@ -1,0 +1,41 @@
+ul,ol,div,h1,h2{
+    margin:0;
+    padding:0;
+}
+
+/* Element Selector */
+
+#special_1 {
+    width:400px; 
+    background-color:#5632ab; 
+}
+
+.desc {
+    color: #f23;
+}
+
+.highlight {
+    background-color: burlywood;
+}
+
+.highlight span {
+    color: blue;
+}
+
+h2,div {
+    /*border: 2px dashed #5632ab;*/
+}
+
+input[name='username']{
+    background-color: #ff9900;
+}
+
+/* Psuedo selectors */
+/* child selectors */
+
+#box {
+    border: 2px dashed #5632ab;
+    margin: 40px 20px 10px 30px; /* top right bottom left */
+   /* margin: 40px 10px;  top&bottom left&right */
+    padding: 40px;
+}

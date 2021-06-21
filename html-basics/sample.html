@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        #box {
+            display:flex;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="width:500px;height:300px;overflow:auto;background-color: darksalmon;">
+        <div style="width:100px;height:100px;background-color: red;
+        position:absolute;top:100px;left:110px"></div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+
+
+    <!-- Box Model -->
+        <div id="box">
+            <div style="background-color:red;flex-grow: 1;">First</div>
+            <div style="background-color:green;flex-grow: 2;">second</div>
+            <div style="background-color:blue;flex-grow: 1;">third</div>
+        </div>
+
+    <!-- Colors -->
+    <h2 style="color:blue">This is an example</h2>
+
+    <h2 style="color:rgba(255,0,0,0.5)">This is an example</h2>
+
+    <h2 style="color:#00ff00">This is an example</h2>
+    <h2 style="color:#0f0">This is an example</h2>
+    <h2 class="desc">This is an example</h2>
+
+    <input type="text" name="username"/>
+    <input type="text" name="mobile"/>
+
+    <!-- Units -->
+    <!-- Fixed Units -->
+    
+    <div id="special_1" class="desc">
+        This is an example
+    </div>
+
+    <!-- Relative Units -->
+    <div style="width:50%;" class="desc highlight">
+        This is an example
+        <span style="font-size: 2em;">This is an example for descendant styling</span>
+    </div>
+
+    <span style="font-size: 2em;">This is an example</span>
+
+    <div style="width:80vw">
+        This is an example
+        <span style="font-size: 2em;">This is an example</span>
+    </div>
+
+    <!-- Font family -->
+    <div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">This is an example</div>
+
+    <ul>
+        <li id="fruit_1" class="fruit">Apple</li>
+        <li id="fruit_2" class="fruit">Banana</li>
+        <li id="fruit_3" class="fruit">Grape</li>
+    </ul>
+
+    <p style="white-space: nowrap; width: 300px;overflow:hidden">
+        Some content me contentSome content me contentSome content me contentSome content me contentSome content me contentSome content me contentSome content me contentSome content me contentSome content me content.
+        Some content me contentSome content me contentSome content me contentSome content me contentSome content me content
+    </p>
+
+
+
+
+</body>
+</html>
