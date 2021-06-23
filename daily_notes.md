@@ -2,6 +2,7 @@
 
 ## Web Architecture
 ## HTML Syntax
+## Document Structure
 ## Elements
 ### formatting (strong, i, sup, ..) and structured (table,ul,ol,dl)
 ### semantic (h1,p,a) vs non semantic (div,span) 
@@ -34,268 +35,220 @@
 
 init.css
 
-div {
-	margin: 0;
-	padding: 0;
-}
+	div {
+		margin: 0;
+		padding: 0;
+	}
 
 premium.css
 
-div {
-	margin: 20px 10px
-}
+	div {
+		margin: 20px 10px
+	}
 
-button {
-	border: 1px sharp #ddd;
-}
+	button {
+		border: 1px sharp #ddd;
+	}
 
 classic.css
 
-div {
-	margin: 20px 10px
-}
+	div {
+		margin: 20px 10px
+	}
 
-button {
-	border: 1px rounded #ddd;
-}
+	button {
+		border: 1px rounded #ddd;
+	}
 
 myapp.css 
 
-.product {
-	
-}
+	.product {
 
-div {
-   padding: 20px;
-}
+	}
+
+	div {
+	   padding: 20px;
+	}
 
 index.html
 
-<head>
+	<head>
 
-	<link ref="stylesheet" href="init.css"/>
-	<link ref="stylesheet" href="classic.css"/>
+		<link ref="stylesheet" href="init.css"/>
+		<link ref="stylesheet" href="classic.css"/>
 
-	<style>
-		
-	</style>
+		<style>
 
-</head>
-<body>
+		</style>
 
-<div class="product" style="">
-<button style="">Save</button>
-</div>
+	</head>
+	<body>
 
-</body>
+	<div class="product" style="">
+	<button style="">Save</button>
+	</div>
 
-Bootstrap
+	</body>
 
-Breakpoints
-Container
-Grid
-Spacing
-Components
-Forms
+## Bootstrap
+### Benefits
+### Setup
+### Breakpoints
+### Container & Grids
+### Spacing
+### Components
+### Forms
 
-JavaScript
+# JavaScript
 
-Syntax
+## Introduction
 
-//this is comment
-var x = 0
-var y = 1
+Use https://jsbin.com/?js,console
 
-var name = "Vimal"
-// name = 'Vimal'
+## Syntax
 
-Variable
+### Instruction
+	var x = 0
+	var y = 0;
 
-data types
-keywords
-Operators
-Control Statements (conditional & loop)
-Arrays
+### Comments
 
-Functions (methods)
-Objects
-String
-Array
+	//this is single line comment
+	/* this is multi line comment */
 
-Math
-Date
+## Variable Declaration
 
+	var name = "Vimal"
+	// name = 'Vimal'
 
+## Data Types
 
+	var zip = 35434
+	console.log(typeof zip)
 
-========
+	var trainer = true
+	console.log(typeof trainer)
 
-//this is comment
-var x = 0
-var y = 1
+	var user = {name:"Vimal"}
 
-var name = "Vimal"
+	console.log(typeof user)
+	
+## String Concatenation
 
-//System.out.println()
-console.log(typeof name)
+	var name = 'Mike'
+	console.log('Hi ' + name)
 
+## Operators
 
-var zip = 35434
-console.log(typeof zip)
+### Arithmetic
+	+ - / * %
+### Unary
+	++ --
+### Assignment 
+	= += -= *=
+### Logical 
+	&& ||
+### Comparison
+	< <= > >=
+### Ternary
+	<expression> ? true : false
+### Equality
+	== ===
+	
+* Double equals: compares the data alone
+* Triple equals: compares the data along with type
 
-var trainer = true
-console.log(typeof trainer)
 
-var user = {name:"Vimal"}
+	var age = 25
+	var ageString = '25'
 
-console.log(typeof user)
+	console.log(age === ageString)
+	
+## Operator Precendence
 
-var name = 'Mike'
+	(4 - 6) * 3 / 5
+	
+## Control Statements (conditional & loop)
 
-console.log('Hi ' + name)
+## Arrays
 
-//Operators
-// Arithmetic: + - / * %
-// Unary: ++ -- += -= *=
-// Assignment: =
-// Logical: && ||
-// Comparison: < <= > >=
-// Ternary: <expression> ? true : false
-// Equality: == ===
+	var arr = ['Train','Bus',100,true]
+	console.log(arr[0])
+	arr[2] = 'Car'
 
-//Double equals: compares the data alone
-//Triple equals: compares the data along with type
+	for(var i = 0; i < arr.length; i++){
+	  console.log(arr[i])
+	}
 
-var age = 25
-var ageString = '25'
+	console.log(typeof arr)
 
-console.log(age === ageString)
+## Functions (methods)
 
-//Operator Precendence
-//(4 - 6) * 3 / 5
+	function add(a,b){
+	  var x = a + b
+	  return x
+	}
 
-//if, if-else
-if(true){
-  
-}
-//switch
+	var result = add(5,6)
 
-//Arrays (can grow)
-var arr = ['Train','Bus',100,true]
-console.log(arr[0])
-arr[2] = 'Car'
 
-for(var i = 0; i < arr.length; i++){
-  console.log(arr[i])
-}
+### Callback Function
 
-console.log(typeof arr)
+#### Synchronous Callback function
 
-//while, do-while
-//break, continue
+	function add(a,b,cbFn){
+	  var x = a + b
+	  cbFn(x)
+	}
 
+	add(5,6, function(result){
+		console.log(result)
+	})
 
-//Methods
-//Functions
+#### Asynchronous Callback function
 
-//void
-//returning value
+	setTimeout(function() {
+		console.log('Testing')
+	}, 2000)
 
-function add(a,b){
-  var x = a + b
-  return x
-}
+	setInterval(function() {
+		console.log('Testing interval')
+	}, 1000)
 
-function print(value) {
-  console.log('Result is ' +value)
-}
+## JS Object
 
-var result = add(5,6)
-print(result)
+	var user = {
+	  name: 'Mike',
+	  address: {
+	    city: 'St.Louis',
+	    state: 'MO'
+	  }
+	}
 
-//Objects
+	var user = {
+	  name: 'Mike',
+	  address: {
+	    city: 'St.Louis',
+	    state: 'MO'
+	  },
+	  scores: [],
+	  applyJob: function () {
+	    console.log('Applying job...')
+	  }
+	}
 
-function apply () {
-    console.log('Applying job...')
-  }
+## Built-in Objects
 
-var user = {
-  name: 'Mike',
-  scores: [],
-  applyJob: apply,
-  address: {
-    city: 'St.Louis',
-    state: 'MO'
-  }
-}
+### String
 
-console.log(user.name)
-console.log(user.address.city)
+	var fruits = 'Apple,Banana,Grapes'
+	var arr = fruits.split(',')
 
-user.applyJob()
+### Array
+### Math
+### Date
 
-user.name = 'Peter'
+# Day 3
 
-console.log(user.name)
 
-user.email = 'peter@testemail.com'
-
-console.log(user)
-
-var fruits = 'Apple,Banana,Grapes'
-var arr = fruits.split(',')
-
-
-//function - regular
-//function - callback
-
-function add (a,b, cbFn) {
-//  return a + b
-  setTimeout(function(){
-    cbFn(a + b)
-  },2000)
-  //cbFn(a + b)
-}
-
-//var result = add(5,6)
-
-add(5,6, function (x){
-  console.log('result: '+x)
-})
-
-
-// setTimeout(function() {
-//   console.log('Testing')
-// }, 2000)
-
-// setInterval(function() {
-//   console.log('Testing interval')
-// }, 1000)
-
-//later - asynchronous
-
-
-console.log('B')
-
-function main(){
-  print('A')
-  
-}
-
-function print(value){
-  console.log(value)
-  
-}
-
-setTimeout(function(){
-  console.log('C')
-},0)
-
-setTimeout(function(){
-  console.log('D')
-},100)
-
-console.log('E')
-
-main('A')
 
