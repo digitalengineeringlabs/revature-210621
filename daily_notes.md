@@ -2,6 +2,7 @@
 
 ## Web Architecture
 ## HTML Syntax
+## Document Structure
 ## Elements
 ### formatting (strong, i, sup, ..) and structured (table,ul,ol,dl)
 ### semantic (h1,p,a) vs non semantic (div,span) 
@@ -89,36 +90,51 @@ index.html
 
 </body>
 
-Bootstrap
+## Bootstrap
+### Benefits
+### Setup
+### Breakpoints
+### Container & Grids
+### Spacing
+### Components
+### Forms
 
-Breakpoints
-Container
-Grid
-Spacing
-Components
-Forms
+# JavaScript
 
-JavaScript
+## Introduction
 
-Syntax
+Use https://jsbin.com/?js,console
 
-//this is comment
+## Syntax
+
+### Instruction
 var x = 0
-var y = 1
+var y = 0;
+
 
 var name = "Vimal"
 // name = 'Vimal'
 
-Variable
+### Comments
 
-data types
-keywords
-Operators
-Control Statements (conditional & loop)
+//this is single line comment
+/* this is multi line comment */
+
+## Variable Declaration
+
+## Data Types
+
+## Operators
+
+
+
+## Control Statements (conditional & loop)
 Arrays
 
 Functions (methods)
+
 Objects
+
 String
 Array
 
