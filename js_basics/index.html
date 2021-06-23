@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer" style="width:80%;border:2px dashed red;padding:1em;margin:3em auto">
+        Outer Element
+        <p id="inner" style="width:auto;border:2px dashed blue;padding:1em;margin:1em">
+            Inner Element
+        </p>
+    </div>
+    <script>
+        
+        var outer = document.querySelector("#outer");
+        outer.addEventListener("click", function (event) {
+            console.log("you clicked outer element");
+        });        
+        outer.addEventListener("contextmenu", function (event) {
+            console.log("you right clicked outer element");
+        });
+
+        var inner = document.querySelector("#inner");
+        inner.addEventListener("click", function (event) {
+            console.log("you clicked inner element");
+            //event.stopPropagation()
+        });
+
+        inner.addEventListener("contextmenu", function (event) {
+            console.log("you right clicked inner element");
+            //event.stopPropagation()
+        });
+
+        for(let elem of document.querySelectorAll('*')) {
+            elem.addEventListener("click", e => alert(`Capturing: ${elem.tagName}`), true);
+            elem.addEventListener("click", e => alert(`Bubbling: ${elem.tagName}`));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="width:80%;margin:2em auto;border:2px dashed blue;padding:2em">
+    Body
+    <div style="width:80%;margin:2em auto;border:2px dashed #888;padding:2em">
+        Outer Element (Div)
+        <p style="margin:2em auto;border:2px dashed #f44;padding:2em">
+            Inner Element (P)
+        </p>
+    </div>
+
+    <script>
+        document.querySelector('p').addEventListener('click', function(event){
+            console.log('p clicked')
+            
+        })
+
+        document.querySelector('div').addEventListener('click', function(event){
+            console.log('div clicked')
+            //event.stopPropagation()
+        })
+
+        document.querySelector('body').addEventListener('click', function(event){
+            console.log('body clicked')
+            //process
+        })
+
+        //Catching
+        //Target
+        //Bubbling
+
+        for(let elem of document.querySelectorAll('*')) {
+            elem.addEventListener("click", e => alert(`Capturing: ${elem.tagName}`), true);
+            elem.addEventListener("click", e => alert(`Bubbling: ${elem.tagName}`), false);
+        }
+
+    </script>
+
+</body>
+</html>

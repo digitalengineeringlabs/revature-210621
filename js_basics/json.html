@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var products = [{
+                name: 'Furniture',
+                stock: 500
+            },
+            {
+                name: 'Television',
+                stock: 500
+            }]
+
+            //JSON.parse() // string to object
+            var string = JSON.stringify(products) //object to string
+
+            console.log(string)
+
+            console.log(JSON.parse('{"name":"Sandra","year":2021}'))
+
+    </script>
+</body>
+</html>

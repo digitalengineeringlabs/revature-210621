@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+            <p>
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" oninput="readName(event)"/>
+            </p>
+            <p>
+                <label for="qualification">Qualification</label>
+                <select id="qualification" onchange="readQuali(event)">
+                    <option>Select</option>
+                    <option>Masters</option>
+                    <option>Bachelors</option>
+                    <option>Diploma</option>
+                </select>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+       
+
+        <script>
+
+            function submitForm() {
+                console.log('form submitted')
+                //validation
+
+            }
+
+            function readQuali(e) {
+                console.log(e.target.value)
+            }
+
+            function readName(e) {
+                console.log(e.target.value)
+            }
+
+            function readForm() {
+                var name = document.querySelector('#name').value
+                var qualification = document.querySelector('#qualification').value
+
+                console.log(name)                
+                console.log(qualification)
+
+                // call the web service and post the information
+
+                //XMLHttpRequest
+
+                //window.alert('Form submitted')
+                
+            }
+        </script>
+    </body>
+</html>

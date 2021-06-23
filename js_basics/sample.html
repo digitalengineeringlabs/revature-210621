@@ -1,0 +1,53 @@
+<html>
+    <head>
+        
+    </head>
+    <!-- <body onload="javascript:console.log('Body Loaded')">  Event Handlers -->
+    <body onload="greet()"> 
+        <input id='username' type='text' name='username' value='Mike'/>
+
+        <div id='content' class='greeting'>
+            Hello there
+        </div>
+
+        <button onclick="sayHi()">Say Hi</button>
+        <button onclick="highlight()">Highlight</button>
+
+        <script>
+
+            function highlight() {
+                document.querySelector('body').setAttribute('style','background-color:#9aa')
+            }
+
+            function greet(){
+                console.log('loaded.')
+            }
+
+            function sayHi() {
+                console.log('Hi there')
+            }
+
+            console.log(window)
+
+            var elem = document.getElementById('username')//.value
+            console.log(elem)
+
+            elem.setAttribute('style','background-color:red')
+
+            // var elems = document.getElementsByClassName('greeting')
+            // console.log(elems[0].innerHTML)
+
+            console.log(document.getElementById('content').innerHTML)
+
+            document.getElementById('content').innerHTML = 'Value is changed by Script'
+
+            var val = document.querySelector('#username').value
+            console.log(val)
+
+            document.querySelector('#content').addEventListener('click',function(){
+                console.log('adding event listener')
+            })
+
+        </script>
+    </body>
+</html>
