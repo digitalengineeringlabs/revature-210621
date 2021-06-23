@@ -1,3 +1,113 @@
+=== Day 1
+
+
+
+=== Day 2
+
+CSS Styling precendence
+
+
+
+CSS - theme design
+
+init.css
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+premium.css
+
+div {
+	margin: 20px 10px
+}
+
+button {
+	border: 1px sharp #ddd;
+}
+
+classic.css
+
+div {
+	margin: 20px 10px
+}
+
+button {
+	border: 1px rounded #ddd;
+}
+
+myapp.css 
+
+.product {
+	
+}
+
+div {
+   padding: 20px;
+}
+
+index.html
+
+<head>
+
+	<link ref="stylesheet" href="init.css"/>
+	<link ref="stylesheet" href="classic.css"/>
+
+	<style>
+		
+	</style>
+
+</head>
+<body>
+
+<div class="product" style="">
+<button style="">Save</button>
+</div>
+
+</body>
+
+Bootstrap
+
+Breakpoints
+Container
+Grid
+Spacing
+Components
+Forms
+
+JavaScript
+
+Syntax
+
+//this is comment
+var x = 0
+var y = 1
+
+var name = "Vimal"
+// name = 'Vimal'
+
+Variable
+
+data types
+keywords
+Operators
+Control Statements (conditional & loop)
+Arrays
+
+Functions (methods)
+Objects
+String
+Array
+
+Math
+Date
+
+
+
+
+========
+
 //this is comment
 var x = 0
 var y = 1
