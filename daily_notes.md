@@ -1,14 +1,36 @@
-=== Day 1
+# Day 1
+
+## Web Architecture
+## HTML Syntax
+## Elements
+### formatting (strong, i, sup, ..) and structured (table,ul,ol,dl)
+### semantic (h1,p,a) vs non semantic (div,span) 
+### Inline (span, strong, img, a, ...) and Block (h1,p,form,div,..) 
+### Form Elements (input,select,form)
+
+## Attributes
+### Style
+### Id and Class
+
+## CSS
+### Colors (Predefined, RGB, HEX)
+### Units (fixed and relative)
+### Selectors (element, id, class, attribute, nested)
+### Box Model (margin, border and padding)
+
+## Responsive Web Design
+### Media Query
+### Flex layout
+### Flexible Visuals (not covered)
+
+
+# Day 2
+
+## CSS Styling precedence
 
 
 
-=== Day 2
-
-CSS Styling precendence
-
-
-
-CSS - theme design
+## CSS - theme design
 
 init.css
 
