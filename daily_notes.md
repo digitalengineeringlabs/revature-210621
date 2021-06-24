@@ -1,6 +1,9 @@
 # Day 1
 
 ## Web Architecture
+
+
+
 ## HTML Syntax
 ## Document Structure
 ## Elements
@@ -250,5 +253,118 @@ Use https://jsbin.com/?js,console
 
 # Day 3
 
+JavaScript Basics
+
+DOM - Document Object Model
+
+Use Javascript in HTML
+<script></script>
+
+-- window and document object
+-- querying using getElementById, getElementsByClassName
+-- querying using querySelector
+
+Accessing Element properties
+.value
+.innerHTML
+
+Setting Element properties (style)
+setAttribute('value','new value') //style
+getAttribute()
+
+Working with forms
+oninput
+onchange
+onclick
+
+DOM Events
+
+All Elements have Events
+
+XML - message format
+JSON - message format
+
+AJAX - XMLHttpRequest
+https://javascript.info/xmlhttprequest
+
+XML - eXtensible Markup Language
+
+<products>
+<product>
+	<name>Furniture</name>
+	<stock>500</stock>
+</product>
+<product>
+	<name>Television</name>
+	<stock>500</stock>
+</product>
+</products>
+
+Schema - validation info on XML
+
+JSON - JavaScript Object Notation
+- String
+
+var product = [{
+	name: 'Furniture',
+	stock: 500
+},{
+	name: 'Television',
+	stock: 500
+}]
+
+var productsJSON = "{
+	'name': 'Furniture',
+	'stock': 500,
+	'available: true
+}"
+
+{
+	'name': 'Furniture',
+	'stock': 500,
+	'available: true,
+	'orders': [{'id':343,'cost':30}]
+}
 
 
+AJAX - Asynchronous JavaScript for XML
+
+JSON
+XmlHttpRequest - make remote HTTP requests from JS
+
+HTTP Requests
+
+GET
+POST
+PUT
+PATCH
+DELETE
+
+API - application programming interface
+HTTP services
+
+
+
+
+
+HTML -
+
+	<html>
+	<body>
+	<div></div>
+	</body>
+	</html>
+
+W3C - compliance
+
+# Day 4
+
+ES6 - advanced JS syntax / features
+
+SQL - Querying, filter and functions
+
+# Day 5
+
+SQL - Joins
+ 
+SQL - DDL, Constraints

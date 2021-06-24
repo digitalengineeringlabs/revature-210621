@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function doSomething(){}
+console.log( doSomething.prototype );
+
+//  It does not matter how you declare the function; a
+//  function in JavaScript will always have a default
+//  prototype property — with one exception: an arrow
+//  function doesn't have a default prototype property
+
+        function Person(age) {
+            this.age = age;
+            this.walk = function(dist){
+                return this.age > 40 && dist > 10 ? 'healthy' : 'unhealthy'
+            }
+        }
+
+        var p1 = new Person(32)
+
+        console.log(p1.age)
+        console.log(p1.walk(30))
+
+
+        var p2 = new Person(48)
+
+        console.log(p2.age)
+        console.log(p2.walk(30))
+    </script>
+</body>
+</html>
