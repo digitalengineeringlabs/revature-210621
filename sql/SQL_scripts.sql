@@ -30,3 +30,26 @@ INSERT INTO employee ("name", gender, age, "location", department, "role", join_
 INSERT INTO employee ("name", gender, age, "location", department, "role", join_date, salary) VALUES('Jennifer','F',24,'Chicago','Finance','Associate',to_date('18/01/16','dd/mm/yy'),49500);
 INSERT INTO employee ("name", gender, age, "location", department, "role", join_date, salary) VALUES('Patricia','F',33,'Memphis','Sales','Associate',to_date('19/11/19','dd/mm/yy'),47000);
 INSERT INTO employee ("name", gender, age, "location", department, "role", join_date, salary) VALUES('Mary','F',26,'Atlanta','Admin','Associate',to_date('31/01/20','dd/mm/yy'),52000);
+
+CREATE TABLE customer (
+	id serial NOT NULL,
+	cust_name varchar NOT NULL,
+	cust_email varchar NOT NULL
+);
+
+ALTER TABLE customer ADD CONSTRAINT customer_pk PRIMARY KEY (id);
+
+CREATE TABLE "order" (
+	order_id int2 NOT NULL,
+	order_date date NOT NULL,
+	order_amount real NULL,
+	customer_id int4 NOT NULL,
+	CONSTRAINT order_pk PRIMARY KEY (order_id),
+	CONSTRAINT order_fk FOREIGN KEY (customer_id) REFERENCES customer(id)
+);
+
+insert into customer (cust_name, cust_email) values ('Mary','mary@email.com');
+insert into customer (cust_name, cust_email) values ('Jennifer','jennifer@email.com');
+insert into customer (cust_name, cust_email) values ('Patricia','patricia@email.com');
+insert into customer (cust_name, cust_email) values ('Linda','linda@email.com');
+insert into customer (cust_name, cust_email) values ('Sarah','sarah@email.com');

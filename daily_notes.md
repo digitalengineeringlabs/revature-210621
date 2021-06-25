@@ -361,10 +361,90 @@ W3C - compliance
 
 ES6 - advanced JS syntax / features
 
+### Template literals
+### let and const
+### Destructuring
+### Spread and Rest Operator
+### Arrow Functions
+### class
+### import and export
+### for-of
+
+	//var arr = [20,40,60]
+	var arr = 'JavaScript'
+
+	for(let item of arr){
+	console.log(item)
+	}
+
+### Promise
+
+	const add = (a,b,cbFn) => {
+	cbFn(a+b)
+	}
+
+	add(3,6,
+		function(result){
+		console.log(result)
+	})
+
+
+	// Promise
+	var pr = new Promise((resolve,reject) => {
+	if(true){
+		resolve('success data')
+	}
+	else {
+		reject('error data')
+	}
+	})
+
+	pr.then((data)=>{
+	console.log(data)
+	}).catch((err)=>{
+	console.log(err)
+	})
+
 SQL - Querying, filter and functions
+
+Non-Relational Databases - No-SQL database
+
+Document based
+Object based
+Graph based
+TimeSeries based
+
+Relational Database Management System - RDBMS 
+
+Table format
+Rows - Records
+Columns - Fields
+
+SQL - Structured Query Language
+
+-- wildcard query
+select * from employee
+
+-- alias
+
+-- filtering with where
+
+-- ordering
+
+-- scalar functions
+
+-- groupby functions
+
 
 # Day 5
 
 SQL - Joins
  
 SQL - DDL, Constraints
+
+
+
+
+
+
+
