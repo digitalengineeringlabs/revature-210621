@@ -28,9 +28,10 @@ app.get('/customers/:id', (req,res) => {
     })
 })
 
-app.post('/', (req,res) => {
+app.post('/customers', async (req,res) => {
     console.log(req.body)
-    res.send(req.body)
+    const result = await add(req.body)
+    res.send(result)
 })
 
 app.listen(5000,()=>{
