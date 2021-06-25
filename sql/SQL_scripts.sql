@@ -53,3 +53,14 @@ insert into customer (cust_name, cust_email) values ('Jennifer','jennifer@email.
 insert into customer (cust_name, cust_email) values ('Patricia','patricia@email.com');
 insert into customer (cust_name, cust_email) values ('Linda','linda@email.com');
 insert into customer (cust_name, cust_email) values ('Sarah','sarah@email.com');
+
+insert into "order" (order_id,order_date,order_amount,customer_id) values (1,'2021-06-01',100,1);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (2,'2021-06-02',50,2);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (3,'2021-06-03',18,3);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (4,'2021-06-04',33,4);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (5,'2021-06-05',90,5);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (6,'2021-06-06',130,1);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (7,'2021-06-07',160,2);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (8,'2021-06-08',20,3);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (9,'2021-06-09',67,4);
+insert into "order" (order_id,order_date,order_amount,customer_id) values (10,'2021-06-10',40,5);
