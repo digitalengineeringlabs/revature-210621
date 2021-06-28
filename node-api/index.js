@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/customers', async (req,res) => {
-    
+    debugger
     try {
         const data = await findAll();
         res.send(data);
@@ -19,7 +19,6 @@ app.get('/customers', async (req,res) => {
 })
 
 // async/await
-
 app.get('/customers/:id', (req,res) => {
     find(req.params.id).then((data) => {
         res.send(data)

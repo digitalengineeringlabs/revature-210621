@@ -1,0 +1,14 @@
+<div>
+  Hello there {{title}}
+
+  <br/>
+  <input type="text" name="name" (input)="changeNameHandler($event)" [value]="name">
+<br/>
+{{name}}
+  <!-- <button disabled="true">Submit</button> -->
+  <button [disabled]="active" (click)="submit()">Submit</button>
+  
+  <app-product></app-product>
+  <app-product></app-product>
+  <app-product></app-product>
+</div>
