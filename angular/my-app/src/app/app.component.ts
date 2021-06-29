@@ -5,10 +5,12 @@ import { Component } from '@angular/core';
   // templateUrl: './app.component.html',
   template: `
   <!-- <app-post [heading]="'Post 1'" (remove)="onDeletePost($event)"></app-post>
-  <app-post [heading]="'Post 2'" (remove)="onDeletePost($event)"></app-post>
-  <app-post [heading]="'Post 3'" (remove)="onDeletePost($event)"></app-post> -->
+ <app-post [heading]="'Post 2'" (remove)="onDeletePost($event)"></app-post>
+  <app-post [heading]="'Post 3'" (remove)="onDeletePost($event)"></app-post> 
   <app-product></app-product>
+-->
 
+  <app-products></app-products>
   `,
   // styleUrls: ['./app.component.css']
   styles: [`

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'app-product',
@@ -21,7 +21,7 @@ import { Component } from "@angular/core";
     `]
 })
 export class ProductComponent {
-    title = 'Furniture'
+    @Input() title
     toggle = 'none'
 
     ss = {backgroundColor:'#daa'}

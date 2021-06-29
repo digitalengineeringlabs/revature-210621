@@ -1,0 +1,21 @@
+
+<!-- <button (click)="toggle()">Toggle</button>
+
+<div *ngIf="showAll; else noShow">
+    <app-product *ngFor="let item of products; let i = index " 
+    [title]="item.title"></app-product>
+</div>
+<ng-template #noShow>
+    <p>Nothing to show</p>
+</ng-template>
+
+<div [ngSwitch]="signal">
+    <div *ngSwitchCase="'RED'">Stop</div>
+    <div *ngSwitchCase="'GREEN'">Go</div>
+    <div *ngSwitchDefault>Yield</div>
+</div> -->
+
+<input type='text' [value]="title" (input)="updateTitle($event)">
+<button (click)="onAdd()">Add</button>
+<app-product *ngFor="let item of products; let i = index " 
+[title]="item.title"></app-product>
