@@ -1,1 +1,12 @@
-<p>post works!</p>
+<div>
+    <h4>{{title}}</h4>
+    <button (click)="toggleDesc()">Toggle</button>
+    <!-- <div style="display:none;font-size:20px"> -->
+    <label [style.font-size.px]="size">Font Size: {{size}} </label>
+    <div [style.display]="show ? 'inline' : 'none'">
+      This is the description area ...
+      This is the description area ...
+      This is the description area ...
+      This is the description area ...
+    </div>
+  </div>
