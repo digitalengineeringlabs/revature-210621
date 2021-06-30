@@ -27,7 +27,10 @@ export class ProductsComponent {
 
   ngOnInit(){
     console.log('onInit called')
-    this.products = this.service.getProducts()
+    this.service.subject.subscribe((data)=>{
+      console.log('receiving data from subject')
+      this.products = data
+    })
     //call and API and update the products
     //make HTTP request
   }
@@ -64,7 +67,6 @@ export class ProductsComponent {
 
   onDelete(title:string){
     this.service.deleteProduct(title)
-    this.products = this.service.getProducts()
   }
  
 }

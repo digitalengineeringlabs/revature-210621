@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core"
+import { Subject } from "rxjs"
 
 @Injectable({
     providedIn: 'root'
@@ -6,6 +7,7 @@ import { Injectable } from "@angular/core"
 export class ProductService {
 
     products = []
+    subject = new Subject<Array<{title:string}>>()
 
     getProducts() {
         console.log('getting products...')
@@ -18,9 +20,11 @@ export class ProductService {
 
     addProduct(prod){
         this.products.push(prod)
+        this.subject.next(this.products)
     }
 
     deleteProduct(title:string){
         this.products = this.products.filter(product => product.title !== title)
+        this.subject.next(this.products)
     }
 }

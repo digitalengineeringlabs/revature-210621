@@ -10,7 +10,10 @@ import { Component } from '@angular/core';
   <app-product></app-product>
 -->
 
-  <app-products></app-products>
+  <!-- <app-products></app-products>
+  <app-product-list></app-product-list> -->
+  <!-- <app-observsample></app-observsample> -->
+  <app-sample></app-sample>
   `,
   // styleUrls: ['./app.component.css']
   styles: [`

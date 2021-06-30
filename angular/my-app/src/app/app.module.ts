@@ -7,6 +7,11 @@ import { PostComponent } from './post/post.component';
 import { ProductsComponent } from './products/products.component';
 import { ShortenPipe } from './shorten.pipe';
 import { ProductService } from './products/products.service';
+import { ObservSampleComponent } from './obsersample.component';
+import { ProductListComponent } from './products/list.component';
+import { SampleComponent } from './api/sample/sample.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [ //Component,Pipe,Directive
@@ -14,10 +19,14 @@ import { ProductService } from './products/products.service';
     ProductComponent,
     PostComponent,
     ProductsComponent,
-    ShortenPipe
+    ObservSampleComponent,
+    ProductListComponent,
+    ShortenPipe,
+    SampleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
