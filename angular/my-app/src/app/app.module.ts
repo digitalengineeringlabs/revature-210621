@@ -6,9 +6,10 @@ import { ProductComponent } from './product/product.component';
 import { PostComponent } from './post/post.component';
 import { ProductsComponent } from './products/products.component';
 import { ShortenPipe } from './shorten.pipe';
+import { ProductService } from './products/products.service';
 
 @NgModule({
-  declarations: [
+  declarations: [ //Component,Pipe,Directive
     AppComponent,
     ProductComponent,
     PostComponent,

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { ProductService } from "../products/products.service";
 
 @Component({
     selector: 'app-product',
@@ -35,8 +36,10 @@ export class ProductComponent {
 
     ss = {backgroundColor:'#daa'}
 
+    service:ProductService
 
-  constructor(){
+  constructor(service:ProductService){
+    this.service = service
     console.log('constructor called')
   }
 
@@ -44,6 +47,8 @@ export class ProductComponent {
     console.log('onInit called')
     //call and API and update the products
     //make HTTP request
+   let prod = this.service.getProduct('1')
+   console.log(prod)
   }
 
   ngDoCheck(){

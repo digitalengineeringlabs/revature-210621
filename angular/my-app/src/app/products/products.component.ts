@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ProductService } from './products.service';
 
 @Component({
   selector: 'app-products',
@@ -17,12 +18,16 @@ export class ProductsComponent {
 
   title:string = ''
 
-  constructor(){
+  service:ProductService
+
+  constructor(service:ProductService){
+    this.service = service
     console.log('constructor called')
   }
 
   ngOnInit(){
     console.log('onInit called')
+    this.products = this.service.getProducts()
     //call and API and update the products
     //make HTTP request
   }
@@ -47,7 +52,7 @@ export class ProductsComponent {
   }
 
   onAdd(){
-    this.products.push({title:this.title})
+    this.service.addProduct({title:this.title})
   }
 
   // showAll:boolean = true
@@ -58,8 +63,8 @@ export class ProductsComponent {
   // }
 
   onDelete(title:string){
-    const filtered = this.products.filter(product => product.title !== title)
-    this.products = filtered
+    this.service.deleteProduct(title)
+    this.products = this.service.getProducts()
   }
  
 }
