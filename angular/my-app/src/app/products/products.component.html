@@ -15,7 +15,18 @@
     <div *ngSwitchDefault>Yield</div>
 </div> -->
 
+<!-- <input type='text' [value]="title" (input)="updateTitle($event)">
+<button (click)="onAdd()">Add</button>
+
+<app-product *ngFor="let item of products; let i = index" 
+[title]="item.title" (delete)="onDelete($event)"></app-product> -->
+
+{{status | async | uppercase}}
+
+<br/>
+
 <input type='text' [value]="title" (input)="updateTitle($event)">
 <button (click)="onAdd()">Add</button>
+
 <app-product *ngFor="let item of products; let i = index " 
-[title]="item.title"></app-product>
+[title]="item.title" (delete)="onDelete($event)"></app-product>

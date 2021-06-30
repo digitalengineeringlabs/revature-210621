@@ -18,8 +18,7 @@ export class PostComponent {
   @Input('heading') title:string// = 'This is a sample post component'
   @Output('remove') delete = new EventEmitter<string>()
    
-  
-  
+   
   show:boolean = false
   size:number = 34
 
