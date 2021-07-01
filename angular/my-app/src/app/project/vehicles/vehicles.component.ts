@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { InventoryService } from "../inventory/inventory.service";
 import { VehiclesService } from "./vehicles.service";
 
 @Component({
@@ -15,7 +16,7 @@ import { VehiclesService } from "./vehicles.service";
         <div [ngClass]="{favourite:v.fav}" *ngFor="let v of vehicles">
         <h4>{{v.brand}} ({{v.model}})</h4>
         {{v.miles}}<br>
-        <button (click)="setFavorite(v)">Yes</button>
+        <button (click)="setFavorite(v)">Yes</button><button (click)="addToInv(v)">Add to Inv</button>
         </div>
     `,
     styles: [
@@ -30,7 +31,7 @@ export class VehiclesComponent {
 
     vehicles = []
 
-    constructor(private vService:VehiclesService){
+    constructor(private vService:VehiclesService,private iService:InventoryService){
 
     }
 
@@ -47,4 +48,7 @@ export class VehiclesComponent {
         this.vService.updateFav(v.brand)
     }
 
+    addToInv(v){
+        this.iService.add(v)
+    }
 }

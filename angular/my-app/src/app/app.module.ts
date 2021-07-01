@@ -17,6 +17,7 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { VehiclesComponent } from './project/vehicles/vehicles.component';
+import { InventoryComponent } from './project/inventory/inventory.component';
 
 @NgModule({
   declarations: [ //Component,Pipe,Directive
@@ -30,7 +31,8 @@ import { VehiclesComponent } from './project/vehicles/vehicles.component';
     SampleComponent,
     SignupComponent,
     LoginComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,
