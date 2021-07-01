@@ -18,6 +18,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { VehiclesComponent } from './project/vehicles/vehicles.component';
 import { InventoryComponent } from './project/inventory/inventory.component';
+import { HomeComponent } from './routes/home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ProductInfoComponent } from './product/productinfo.component';
+import { NotFoundComponent } from './routes/notfound.component';
+import { AuthGaurdService } from './routes/authgaurd.service';
+
+const appRoutes: Routes = [
+  {path:'',component:HomeComponent, children:[{path:'products/:id',component:ProductInfoComponent}]},
+  {path:'products',component:ProductsComponent, 
+            canActivate: [AuthGaurdService] },
+  {path:'not-found', component:NotFoundComponent},
+  {path:'**', redirectTo: 'not-found'}
+  
+]
 
 @NgModule({
   declarations: [ //Component,Pipe,Directive
@@ -32,13 +46,17 @@ import { InventoryComponent } from './project/inventory/inventory.component';
     SignupComponent,
     LoginComponent,
     VehiclesComponent,
-    InventoryComponent
+    InventoryComponent,
+    HomeComponent,
+    ProductInfoComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

@@ -3,13 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-first',
   templateUrl: './app.component.html',
-  
-  // styleUrls: ['./app.component.css']
-  styles: [`
-  div{
-    background-color:#def
-  }
-  `]
+  styleUrls: ['./app.component.css']
+  // styles: [`
+  // div{
+  //   background-color:#def
+  // }
+  // `]
 })
 export class AppComponent {
   title = 'my-frst-app'

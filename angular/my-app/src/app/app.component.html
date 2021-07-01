@@ -20,8 +20,8 @@
 -->
 
   <!-- <app-products></app-products> -->
-  <app-vehicles></app-vehicles>
-  <app-inventory></app-inventory>
+  <!-- <app-vehicles></app-vehicles>
+  <app-inventory></app-inventory> -->
   <!-- <app-product-list></app-product-list> -->
   <!-- <app-observsample></app-observsample> -->
   <!-- <app-sample></app-sample> -->
@@ -32,3 +32,11 @@
   </div> -->
 <!-- <app-signup></app-signup> -->
 <!-- <app-login></app-login> -->
+
+<ul>
+  <li routerLinkActive="active" [routerLinkActiveOptions]={exact:true}><a routerLink="">Home</a> </li>
+  <li routerLinkActive="active" ><a [routerLink]="['products']">Products</a>   </li>
+  <li routerLinkActive="active" ><a href="/blog">Blog</a></li>
+</ul>
+
+<router-outlet></router-outlet>
