@@ -12,6 +12,11 @@ import { ProductListComponent } from './products/list.component';
 import { SampleComponent } from './api/sample/sample.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './user.service';
+import { SignupComponent } from './signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { VehiclesComponent } from './project/vehicles/vehicles.component';
 
 @NgModule({
   declarations: [ //Component,Pipe,Directive
@@ -22,13 +27,18 @@ import { HttpClientModule } from '@angular/common/http';
     ObservSampleComponent,
     ProductListComponent,
     ShortenPipe,
-    SampleComponent
+    SampleComponent,
+    SignupComponent,
+    LoginComponent,
+    VehiclesComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

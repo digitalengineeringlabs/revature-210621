@@ -1,0 +1,13 @@
+<h4>Signup Form</h4>
+
+<form (ngSubmit)="onSignupSubmit(f)" #f="ngForm">
+    <p><input type="text" name="username" placeholder="username" ngModel required></p>
+    <p><input type="password" name="password" placeholder="password" ngModel></p>
+    <p><input type="text" name="email" placeholder="email" ngModel #emailInput="ngModel" required email>
+        <span *ngIf="emailInput.dirty && !emailInput.valid">Enter valid email</span>
+        <!-- <span *ngIf="emailInput.touched">Touched</span>
+        <span *ngIf="emailInput.untouched">UnTouched</span> -->
+    </p>
+    
+    <button type="submit" [disabled]="!f.valid">Signup</button>
+</form>

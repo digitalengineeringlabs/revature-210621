@@ -18,10 +18,7 @@ export class ProductsComponent {
 
   title:string = ''
 
-  service:ProductService
-
-  constructor(service:ProductService){
-    this.service = service
+  constructor(private service:ProductService){
     console.log('constructor called')
   }
 
